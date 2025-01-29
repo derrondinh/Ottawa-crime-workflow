@@ -1,0 +1,6 @@
+.snakemake/
+.env
+data/raw/
+data/cleaned/
+data/transformed
+results/
