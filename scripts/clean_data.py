@@ -12,10 +12,19 @@ try:
     df.dropna(subset=["ID", "Occurred Date"], inplace=True)
 
     # Drop duplicate rows
-    df.drop_duplicates(inplace=True) 
+    df.drop_duplicates(inplace=True)
 
-    # Convert Occurred Date column to datetime format
+    # Convert date columns to datetime format
     df["Occurred Date"] = pd.to_datetime(df["Occurred Date"], errors="coerce")
+    df["Reported Date"] = pd.to_datetime(df["Reported Date"], errors="coerce")
+
+    # Convert time columns to integer hour values
+    df["Occurred Hour"] = df["Occurred Hour"].fillna(0).astype(int)
+    df["Reported Hour"] = df["Reported Hour"].fillna(0).astype(int)
+
+    # Standardize coordinates (rounding to 6 decimal places)
+    df["x"] = df["x"].round(6)
+    df["y"] = df["y"].round(6)
 
     # Save cleaned data
     df.to_csv(output_file, index=False)
