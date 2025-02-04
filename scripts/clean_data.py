@@ -26,7 +26,7 @@ try:
     df["x"] = df["x"].round(6)
     df["y"] = df["y"].round(6)
 
-    # Save cleaned data
+    # Save cleaned data 
     df.to_csv(output_file, index=False)
     print(f"Cleaned data saved to {output_file}")
 
