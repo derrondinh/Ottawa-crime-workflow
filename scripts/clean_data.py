@@ -12,7 +12,7 @@ try:
     df.dropna(subset=["ID", "Occurred Date"], inplace=True)
 
     # Drop duplicate rows
-    df.drop_duplicates(inplace=True)
+    df.drop_duplicates(inplace=True) 
 
     # Convert Occurred Date column to datetime format
     df["Occurred Date"] = pd.to_datetime(df["Occurred Date"], errors="coerce")
