@@ -1,3 +1,10 @@
+rule all:
+    input:
+        "data/raw/Bike_Crime_Data.csv",
+        "data/clean/Bike_Crime_Cleaned.csv",
+        "data/transformed/Bike_Crime_Transformed.csv",
+        "results/plots/bike_theft_by_neighbourhood.png",
+        "results/reports/Bike_Crime_Report.txt"
 rule get_data:
     output: "data/raw/Bike_Crime_Data.csv"
     script: "scripts/download_data.py"
