@@ -15,7 +15,7 @@ Alternatively, install dependencies from requirements.txt:
 pip install -r requirements.txt
 
 2. Clone the Repository
-git clone https://github.com/YOUR_USERNAME/Ottawa-crime-workflow.git
+git clone https://github.com/derrondinh/Ottawa-crime-workflow.git
 cd Ottawa-crime-workflow
 
 3. Organize the Directory Structure
